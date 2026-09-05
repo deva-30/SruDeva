@@ -111,7 +111,7 @@ For Hardware:
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+https://drive.google.com/file/d/1NemecpTPUBcVhHhTR0zjZ-ndqyRM6vn3/view?usp=sharing
 *Explain what the video demonstrates*
 
 # Additional Demos

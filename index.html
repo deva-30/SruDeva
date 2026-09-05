@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excuse Generator 3000™ - Because "I Forgot" Won't Cut It</title>
+  <meta name="description" content="Introducing EXCUSE GENERATOR 3000™ — generate hilarious, sarcastic, and creative excuses for missing class, being late, skipped assignments, and more!">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Confetti Canvas -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-top">
+        <div class="brand-badge">
+          <span class="pulse-dot"></span>
+          <span>Zero Accountability Guaranteed</span>
+        </div>
+        <div class="header-actions">
+          <button id="btn-sound-toggle" class="icon-btn active-sound" title="Toggle Sound Effects" aria-label="Toggle sound effects">
+            <span>🔊</span>
+            <span id="sound-status-text">SFX: ON</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="header-titles">
+        <div class="logo-mascot" id="header-logo" title="BlameBot 3000">
+          🤖
+        </div>
+        <div class="title-text">
+          <h1>EXCUSE GENERATOR <span class="version-tag">3000™</span></h1>
+          <p class="tagline">Because "I forgot" can only save you so many times 💀</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Controls Card -->
+    <section class="controls-card" aria-label="Excuse Generation Controls">
+      <div class="dire-situation-section">
+        <div class="section-label">
+          <span>🎯</span>
+          <span>1. Pick Your Dire Situation</span>
+        </div>
+
+        <!-- Category Selector -->
+        <div class="category-tabs" id="category-tabs" role="tablist" aria-label="Situation Categories"></div>
+
+        <!-- Situations Container for Active Category -->
+        <div class="situations-wrapper">
+          <div class="situations-grid" id="situations-container" role="tabpanel" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="config-row">
+        <!-- Target Recipient -->
+        <div class="config-box">
+          <label for="target-recipient">
+            <span>Who are we lying to?</span>
+            <span>🎯</span>
+          </label>
+          <div class="select-custom">
+            <select id="target-recipient">
+              <option value="professor">Strict Professor / Teacher 👨‍🏫</option>
+              <option value="boss">Boss / Corporate Manager 💼</option>
+              <option value="mom">Mom / Overprotective Parent 👵</option>
+              <option value="friend">Best Friend / Gang 🫂</option>
+              <option value="roommate">Passive-Aggressive Roommate 🏠</option>
+              <option value="date">Date / Romantic Partner 💘</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Creative Dishonesty Slider -->
+        <div class="config-box">
+          <label for="dishonesty-range">
+            <span>✨ Creative Dishonesty Dial</span>
+          </label>
+          <div class="dishonesty-slider-container">
+            <input type="range" id="dishonesty-range" class="dishonesty-range" min="1" max="4" step="1" value="2">
+            <div class="slider-labels">
+              <span>Plausible</span>
+              <span>Chaotic</span>
+              <span>Unhinged</span>
+              <span>Cosmic</span>
+            </div>
+            <div class="level-indicator" id="dishonesty-level-badge">
+              Chaotic Neutral 🎭
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Trigger Buttons -->
+      <div class="action-zone">
+        <button type="button" id="btn-generate" class="btn-generate" aria-label="Generate Excuse">
+          <span>✨</span>
+          <span>Summon Perfect Excuse</span>
+          <span>✨</span>
+        </button>
+        <button type="button" id="btn-panic" class="btn-panic" title="Instant Emergency Excuse" aria-label="Panic emergency button">
+          <span>🚨 PANIC MODE</span>
+          <span style="font-size: 0.72rem; font-weight: 800; opacity: 0.9;">1-Click Alibi</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Main Excuse Stage -->
+    <main class="stage-card" id="stage-card" aria-live="polite">
+      <div class="stage-header">
+        <div class="stage-meta">
+          <span class="badge-tag recipient-tag" id="stage-recipient-tag">Target: Professor</span>
+          <span class="badge-tag dishonesty-tag" id="stage-dishonesty-tag">Dishonesty: Lvl 2</span>
+        </div>
+        <div class="mascot-avatar" id="mascot-avatar" title="Current Mascot Mood">
+          😼
+        </div>
+      </div>
+
+      <div class="excuse-quote-box">
+        <span class="quote-decor open">“</span>
+        <div class="excuse-text" id="excuse-text">
+          Loading the finest alibi technology...
+        </div>
+        <span class="quote-decor close">”</span>
+      </div>
+
+      <!-- Sarcasm & Believability Gauges -->
+      <div class="stats-grid">
+        <div class="stat-pill">
+          <div class="stat-header">
+            <span>Believability</span>
+            <span id="val-believability" class="stat-value">55%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-believability" id="bar-believability" style="width: 55%;"></div>
+          </div>
+        </div>
+
+        <div class="stat-pill">
+          <div class="stat-header">
+            <span>Sarcasm Index</span>
+            <span id="val-sarcasm" class="stat-value">62%</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-sarcasm" id="bar-sarcasm" style="width: 62%;"></div>
+          </div>
+        </div>
+
+        <div class="stat-pill">
+          <div class="stat-header">
+            <span>Audacity Rating</span>
+            <span id="val-audacity" class="stat-value">6/10</span>
+          </div>
+          <div class="progress-bar-bg">
+            <div class="progress-bar-fill fill-risk" id="bar-audacity" style="width: 60%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Delivery Strategy Tip -->
+      <div class="delivery-tip-box">
+        <span class="tip-icon">💡</span>
+        <div>
+          <strong style="display: block; margin-bottom: 2px;">Recommended Delivery Strategy:</strong>
+          <span id="delivery-tip-text">Look them dead in the eye and don't blink for 6 seconds.</span>
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="stage-actions">
+        <div class="action-btn-group">
+          <button type="button" id="btn-copy" class="btn-secondary btn-copy" aria-label="Copy excuse to clipboard">
+            <span>📋</span>
+            <span>Copy Excuse</span>
+          </button>
+          <button type="button" id="btn-randomize" class="btn-secondary" aria-label="Randomize all settings">
+            <span>🎲</span>
+            <span>Randomize All</span>
+          </button>
+        </div>
+      </div>
+    </main>
+
+    <!-- Rap Sheet / History Drawer -->
+    <section class="history-section" id="history-section" aria-label="Excuse History">
+      <div class="history-header" id="history-header">
+        <h3>
+          <span>📜</span>
+          <span>Your Rap Sheet (Alibi Log)</span>
+          <span class="history-badge" id="history-count-badge">0 alibis</span>
+        </h3>
+        <button type="button" id="btn-clear-history" class="icon-btn" style="font-size: 0.8rem; padding: 4px 10px;" title="Clear Rap Sheet">
+          <span>🗑️ Clear</span>
+        </button>
+      </div>
+
+      <div class="history-list" id="history-list">
+        <div class="empty-history">
+          Your rap sheet is squeaky clean. Generate some excuses to establish your criminal record!
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <div class="disclaimer-badge">
+        ⚠️ Warning: Excessive use may lead to termination, expulsion, or an intervention.
+      </div>
+      <p>Excuse Generator 3000™ · Crafted with questionable morality &amp; zero accountability</p>
+    </footer>
+  </div>
+
+  <!-- Toast Notification Root -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

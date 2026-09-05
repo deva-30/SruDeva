@@ -48,7 +48,8 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-https://github.com/deva-30/SruDeva/blob/1ca4cd5e08481753b69a8decd6f9b4e3f8e2a065/Screenshot%202026-09-05%20075756.png
+<img width="1230" height="252" alt="image" src="https://github.com/user-attachments/assets/35165479-b61f-4ece-b276-28630aa44848" />
+
 
 ![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*

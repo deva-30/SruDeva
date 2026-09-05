@@ -1,35 +1,33 @@
-<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" />
+<img width="1280" height="640" alt="git (1)" src="https://github.com/user-attachments/assets/8920b256-2ba8-4988-b824-5351134eb4bd" /
 
 
-
-# [Project Name] 🎯
+# Excuse Generator🎯
 
 
 ## Basic Details
-### Team Name: [Name]
+### Team Name: All is well
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Member 1: Sruthi M Nair - Jain University
+- Member 2: Devapriya S Kumar - Jain University
 
 ### Project Description
-[2-3 lines about what your project does]
+Introducing EXCUSE GENERATOR 3000™ , because “I forgot” cannot save you everytimes. Just enter your situation and pick how believable you want to be, and let the generator come up with an excuse for you ranging from “actually believable” to “yeah, you're definitely getting caught.” Powered by bad decisions and zero accountability
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+Last minute lie
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+Unnecessry Technology
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
+- Languages used: Html, CSS, Java Script
+- Frameworks used: None
+- Libraries used:  None
+- Tools used: Git, VS Code, Live Server (or http-server/Node), Chrome/Edge, GitHub Pages (for hosting).
 
 For Hardware:
 - [List main components]
@@ -39,13 +37,41 @@ For Hardware:
 ### Implementation
 For Software:
 # Installation
-[commands]
+gh repo clone deva-30/excuse-generator USELESS
+cd USELESS
+npm install
+npm run dev
 
 # Run
-[commands]
+npm install
+npm run dev    
+npm run
 
 ### Project Documentation
-For Software:
+For Software:Overview
+
+Excuse Generator 3000™ is a fun web application that helps users come up with creative excuses for different situations. Users simply enter what happened, choose how believable or creative they want the excuse to be, and get a generated response.
+
+How It Works
+Enter a situation or reason.
+Choose the desired excuse level.
+Click the generate button.
+The app creates a suitable excuse based on the input.
+Copy the excuse and use it if you dare.
+Main Features
+Generates excuses based on user input
+Different levels of creativity and believability
+Simple and easy-to-use interface
+Responsive design for different devices
+Quick excuse generation
+Option to copy the generated excuse
+Purpose
+
+The project was created as a fun way to explore web development and AI while building something interactive and entertaining. The main focus is on keeping the experience simple, quick, and enjoyable.
+
+Disclaimer
+
+This application is intended for entertainment purposes only. Use the generated excuses responsibly.
 
 # Screenshots (Add at least 3)
 <img width="1230" height="252" alt="image" src="https://github.com/user-attachments/assets/35165479-b61f-4ece-b276-28630aa44848" />

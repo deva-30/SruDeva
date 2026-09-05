@@ -49,9 +49,11 @@ For Software:
 
 # Screenshots (Add at least 3)
 <img width="1230" height="252" alt="image" src="https://github.com/user-attachments/assets/35165479-b61f-4ece-b276-28630aa44848" />
+The landing section introduces Excuse Generator 3000™ with its playful design and simple interface. It sets the tone of the app while giving users quick access to the main controls.
 
+<img width="882" height="827" alt="image" src="https://github.com/user-attachments/assets/9b20d974-8f91-4ce7-b60c-67f0c8e39ca6" />
+Users can select the situation they are dealing with, choose who they need to convince, and adjust the creativity level to control how believable or chaotic the excuse should be.
 
-![Screenshot2](Add screenshot 2 here with proper name)
 *Add caption explaining what this shows*
 
 ![Screenshot3](Add screenshot 3 here with proper name)

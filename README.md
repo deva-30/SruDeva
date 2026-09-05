@@ -57,9 +57,8 @@ Users can select the situation they are dealing with, choose who they need to co
 <img width="906" height="592" alt="image" src="https://github.com/user-attachments/assets/29100150-d13c-491e-94f7-f8f1b250c62f" />
 Once the details are selected, the app generates a personalized excuse. It also provides believability, sarcasm, and audacity ratings along with a suggested delivery strategy.
 
-
-![Screenshot3](Add screenshot 3 here with proper name)
-*Add caption explaining what this shows*
+<img width="913" height="402" alt="image" src="https://github.com/user-attachments/assets/3f785e2b-2df5-4f47-87d7-07ea0a847d1c" />
+The Rap Sheet keeps a record of previously generated excuses, allowing users to quickly review, copy, or clear their excuse history.
 
 # Diagrams
 ![Workflow](Add your workflow/architecture diagram here)

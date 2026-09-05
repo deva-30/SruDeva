@@ -54,7 +54,9 @@ The landing section introduces Excuse Generator 3000™ with its playful design 
 <img width="882" height="827" alt="image" src="https://github.com/user-attachments/assets/9b20d974-8f91-4ce7-b60c-67f0c8e39ca6" />
 Users can select the situation they are dealing with, choose who they need to convince, and adjust the creativity level to control how believable or chaotic the excuse should be.
 
-*Add caption explaining what this shows*
+<img width="906" height="592" alt="image" src="https://github.com/user-attachments/assets/29100150-d13c-491e-94f7-f8f1b250c62f" />
+Once the details are selected, the app generates a personalized excuse. It also provides believability, sarcasm, and audacity ratings along with a suggested delivery strategy.
+
 
 ![Screenshot3](Add screenshot 3 here with proper name)
 *Add caption explaining what this shows*
